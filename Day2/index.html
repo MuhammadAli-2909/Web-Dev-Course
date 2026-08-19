@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<body>
+    <!--
+        Semantic tags describe what their content means, like header, nav, main, section, article, aside, footer.
+        A browser or screen reader can tell what role that part of the page plays just from the tag name.
+        Non-semantic tags like div and span don't carry any meaning, they're just generic containers
+        used for grouping or styling, block-level (div) or inline (span).
+    -->
+    <!-- header is a semantic tag, used for the top part of the page like logo/heading/nav -->
+    <header>
+        <h1>My Website</h1>
+        <!-- nav is a semantic tag, groups navigation links together -->
+        <nav>
+            <!-- anchor #1: href points to another file in the same folder -->
+            <a href="about.html">About</a><br>
+            <!-- anchor #2: href has a full external URL, takes you to another website -->
+            <a href="https://www.google.com/">Google</a><br>
+            <!-- anchor #3: href uses #id, scrolls down to the element with id="Dani" on this same page -->
+            <a href="#Ali">About Ali</a><br>
+        </nav>
+    </header>
+
+    <main>
+        <!-- section groups content by topic -->
+        <section>
+            <h2>About</h2>
+            <p>This is the about section of my website.</p>
+            <!-- unordered list, shows bullet points -->
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <!-- ordered list, shows numbers -->
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+        </section>
+
+        <!-- aside is for content related to but separate from the main content -->
+        <aside>
+            <img src="49.jpg" alt="building" width="300"><br>
+        </aside>
+
+        <!-- article is for standalone, independent content -->
+        <article>
+            <!-- video attributes: controls = show play/pause bar, loop = replay automatically, autoplay = start on its own, muted = start with no sound -->
+            <video src="demo.mp4" controls loop autoplay muted></video><br>
+            <!-- audio attributes work the same as video: controls, loop, autoplay -->
+            <audio src="song.mp3" controls loop autoplay></audio>
+        </article>
+
+        <section>
+            <!-- border attribute sets the thickness of the table lines -->
+            <table border="2">
+                <tr>
+                    <th>Name</th>
+                    <th>Profession</th>
+                </tr>
+                <tr>
+                    <td>Ahmed</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Bilal</td>
+                    <td>Teacher</td>
+                </tr>
+                <tr></tr>
+            </table>
+        </section>
+
+        <!-- iframe embeds content from another website, here a YouTube video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VlyLyBqNvVE?si=rCNECNVMDg2F9uaR"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- id="Dani" makes this paragraph a target, the #Dani anchor above jumps here -->
+        <p id="Ali">Ali Hanif</p>
+
+        <form action="">
+            <!-- label's "for" attribute matches the input's "id", clicking the label selects that input -->
+            <label for="text">Name:</label>
+            <!-- type="text": plain text field, placeholder shows a light hint text -->
+            <input type="text" name="" id="text" placeholder="e.g Ali">
+
+            <label for="pass">Password:</label>
+            <!-- type="password": hides typed characters as dots -->
+            <input type="password" name="" id="pass">
+
+            <!-- type="checkbox": on/off option, can pick more than one -->
+            <input type="checkbox" name="" id="">
+
+            <!-- type="date": opens a calendar to pick a date -->
+            <input type="date" name="" id="">
+
+            <!-- type="file": lets the user upload a file from their device -->
+            <input type="file" name="" id="">
+
+            <!-- type="radio": only one option can be selected within the same "name" group -->
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+
+            <!-- type="range": a slider to pick a value between min and max -->
+            <input type="range" name="" id="" min="0" max="1000" value="300">
+        </form>
+
+        <!-- button: clickable, used to submit a form or trigger JS -->
+        <button>Button</button>
+    </main>
+
+    <!-- footer is for the bottom part of the page, like copyright or social links -->
+    <footer>
+        <nav>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </nav>
+    </footer>
+
+    <!-- div is a block-level generic container, has no special meaning on its own -->
+    <div>For Information</div>
+    <!-- span is an inline generic container, used to target small pieces of text -->
+    <span>for Ali</span>
+    <span>for Ahmed</span>
+</body>
+
+</html>
