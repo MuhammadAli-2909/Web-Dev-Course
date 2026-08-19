@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta description tells search engines what this page is about, used for SEO -->
+    <meta name="description" content="A simple personal website built with HTML.">
     <title>My Website</title>
+    <!-- link connects an external CSS file, this is how a page actually gets styled -->
+    <link rel="stylesheet" href="style.css">
+    <!-- script connects an external JS file, used for adding interactivity -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +29,7 @@
             <a href="about.html">About</a><br>
             <!-- anchor #2: href has a full external URL, takes you to another website -->
             <a href="https://www.google.com/">Google</a><br>
-            <!-- anchor #3: href uses #id, scrolls down to the element with id="Dani" on this same page -->
+            <!-- anchor #3: href uses #id, scrolls down to the element with id="Ali" on this same page -->
             <a href="#Ali">About Ali</a><br>
         </nav>
     </header>
@@ -32,7 +38,12 @@
         <!-- section groups content by topic -->
         <section>
             <h2>About</h2>
-            <p>This is the about section of my website.</p>
+            <!-- strong is semantic bold, means the text is important -->
+            <p>This is the <strong>about</strong> section of my website.</p>
+            <!-- em is semantic italic, means the text is emphasized -->
+            <p>I <em>really</em> enjoy building websites.</p>
+            <!-- hr draws a horizontal line, used to separate content -->
+            <hr>
             <!-- unordered list, shows bullet points -->
             <ul>
                 <li>HTML</li>
@@ -49,7 +60,11 @@
 
         <!-- aside is for content related to but separate from the main content -->
         <aside>
-            <img src="49.jpg" alt="building" width="300"><br>
+            <!-- figure groups an image with its caption, figcaption is the caption text itself -->
+            <figure>
+                <img src="49.jpg" alt="building" width="300">
+                <figcaption>A building near my house</figcaption>
+            </figure>
         </aside>
 
         <!-- article is for standalone, independent content -->
@@ -85,40 +100,72 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <!-- id="Dani" makes this paragraph a target, the #Dani anchor above jumps here -->
+        <!-- id="Ali" makes this paragraph a target, the #Ali anchor above jumps here -->
         <p id="Ali">Ali Hanif</p>
 
         <form action="">
             <!-- label's "for" attribute matches the input's "id", clicking the label selects that input -->
             <label for="text">Name:</label>
             <!-- type="text": plain text field, placeholder shows a light hint text -->
-            <input type="text" name="" id="text" placeholder="e.g Ali">
+            <input type="text" name="" id="text" placeholder="e.g Ali"><br>
 
             <label for="pass">Password:</label>
             <!-- type="password": hides typed characters as dots -->
-            <input type="password" name="" id="pass">
+            <input type="password" name="" id="pass"><br>
+
+            <label for="email">Email:</label>
+            <!-- type="email": checks that the input looks like a valid email address -->
+            <input type="email" name="" id="email"><br>
+
+            <label for="age">Age:</label>
+            <!-- type="number": only accepts numbers, often shows up/down arrows -->
+            <input type="number" name="" id="age" min="1" max="100"><br>
 
             <!-- type="checkbox": on/off option, can pick more than one -->
-            <input type="checkbox" name="" id="">
+            <label for="subscribe">Subscribe:</label>
+            <input type="checkbox" name="" id="subscribe"><br>
 
             <!-- type="date": opens a calendar to pick a date -->
-            <input type="date" name="" id="">
+            <label for="date">Date:</label>
+            <input type="date" name="" id="date"><br>
 
             <!-- type="file": lets the user upload a file from their device -->
-            <input type="file" name="" id="">
+            <label for="file">File:</label>
+            <input type="file" name="" id="file"><br>
 
             <!-- type="radio": only one option can be selected within the same "name" group -->
             <input type="radio" name="gender" id="male">
             <label for="male">Male</label>
             <input type="radio" name="gender" id="female">
-            <label for="female">Female</label>
+            <label for="female">Female</label><br>
 
             <!-- type="range": a slider to pick a value between min and max -->
-            <input type="range" name="" id="" min="0" max="1000" value="300">
+            <label for="range">Value:</label>
+            <input type="range" name="" id="range" min="0" max="1000" value="300"><br>
+
+            <label for="country">Country:</label>
+            <!-- select creates a dropdown, each option inside it is one choice -->
+            <select name="" id="country">
+                <option value="pakistan">Pakistan</option>
+                <option value="other">Other</option>
+            </select><br><br><br>
+
+            <label for="msg">Message:</label>
+            <!-- textarea is a multi-line text box, rows/cols set its visible size -->
+            <textarea name="" id="msg" rows="4" cols="30"></textarea><br><br><br>
+
+            <!-- type="submit" actually sends the form, unlike a plain button -->
+            <input type="submit" value="Submit"><br>
         </form>
 
         <!-- button: clickable, used to submit a form or trigger JS -->
-        <button>Button</button>
+        <button>Button</button><br>
+
+        <!-- details/summary makes a collapsible section, summary is the always-visible clickable part -->
+        <details>
+            <summary>More info</summary>
+            <p>This part only shows up when the details box is expanded.</p>
+        </details>
     </main>
 
     <!-- footer is for the bottom part of the page, like copyright or social links -->
